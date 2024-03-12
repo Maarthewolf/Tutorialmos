@@ -1,0 +1,33 @@
+1. Přidáme do ModItems nový item přes:
+    public static final  RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
+            () -> new Item(new Item.Properties()));
+
+    SAPPHIRE -> místo tohohle dáme jméno itemu s caps místo mezer _
+    Toto přidá item o id: "sapphire" do hry
+    za Item.Properties() dáváme item properties z https://docs.minecraftforge.net/en/1.20.1/items/
+
+2. Musíme vytvvořit model Itemu, který se nám zobrazí v ruce, když ho držíme.
+
+resources/assets/tutorialmod/models/item
+
+    vytvoříme json file ve formátu id_itemu.json
+
+    {
+      "parent": "item/generated",
+      "textures" : {
+        "layer0": "tutorialmod:item/sapphire"
+      }
+    }
+
+    parent - je jakým způsobem se nám bude generovat 3D item když ho budeme držet
+    textures/layer0 bere png textury itemu
+
+3. Přidáme do lang/en_us.json
+
+  "item.tutorialmod.id_itemu": "Jméno Itemu",
+
+Jméno Itemu může obsahoval velká malá písmena apod.
+
+4. Přidáme voně vytvořený Item do našeho Creative Tabu
+
+                        output.accept(ModItems.JMENOITEMU.get());

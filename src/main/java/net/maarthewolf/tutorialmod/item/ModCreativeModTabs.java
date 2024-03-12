@@ -1,6 +1,7 @@
 package net.maarthewolf.tutorialmod.item;
 
 import net.maarthewolf.tutorialmod.TutorialMod;
+import net.maarthewolf.tutorialmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,7 +20,9 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+    //Přidáváme bloky a itemy do custom creative tabu abychom je měli z kama brat
                         output.accept(ModItems.SAPPHIRE.get());
+                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
 
                     })
                     .build());
