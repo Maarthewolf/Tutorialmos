@@ -1,0 +1,40 @@
+1. Recept s custom inputem
+
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "sss",
+    "sss",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "tutorialmod:sapphire"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:sapphire_block",
+    "count": 1
+  }
+
+}
+
+2. Repecpt kde input je jedno jakou má polohu
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tutorialmod:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:sapphire",
+    "count": 9
+  }
+}
+
+3. Další recepty jako blasting/cutting atd najdeme v ExternalLibraries/Gradle: net.minecraft:client:extra:1.20.1,
+    kde jsou šechny vanila mc recepty

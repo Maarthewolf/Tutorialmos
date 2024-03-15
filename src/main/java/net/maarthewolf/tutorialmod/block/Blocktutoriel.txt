@@ -1,0 +1,46 @@
+1. Vytvoříme blok pomocí:
+
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+
+
+    properties apod najdeme zde: https://docs.minecraftforge.net/en/1.20.x/blocks/
+
+je to skoro stejné jak u tiemu akorát složitější protože blok nemá přiřazený item. To jsme ale udělali automaticky
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registryBlockItem(name, toReturn);
+        return  toReturn;
+    }
+
+2. do Blockstates přidáme json file se jménem totožné k id bloku.
+
+2A Pokudchceme vytvořit blok který má jednu texturu na všech stranách použijeme tento kód
+
+{
+  "variants": {
+    "": {
+      "model": "tutorialmod:block/sapphire_block"
+    }
+  }
+}
+
+kde model bere png file z textures/blocks
+
+2B Pokud chceme udělat block který má dané textury (WIP): https://docs.minecraftforge.net/en/1.20.x/blocks/states/
+
+3.Přidáme blok do modelů ať ví jak nám to udělqat model do ruky jak u itemu
+
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tutorialmod:block/sapphire_block"
+  }
+}
+
+
+!!! Nevím jak se to dělá s blocky z 2B!!!
+
+4. Přidáme block do lang
+5. Přidáme block do naší creative tab
