@@ -22,7 +22,12 @@ public class ModCreativeModTabs {
     //Přidáváme bloky a itemy do custom creative tabu abychom je měli z kama brat
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-
+                        output.accept(ModBlocks.SAPPHIRE_ORE.get());
+                        output.accept(ModItems.RAW_SAPPHIRE.get());
+                        output.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
+                        output.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+                        output.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
                     })
                     .build());
 

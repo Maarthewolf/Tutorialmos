@@ -1,5 +1,11 @@
 {
   "item.tutorialmod.sapphire": "Sapphire",
   "creativetab.tutorial_tab": "Tutorial Tab",
-  "block.tutorialmod.sapphire_block": "Block of Sapphire"
+  "block.tutorialmod.sapphire_block": "Block of Sapphire",
+  "block.tutorialmod.sapphire_ore" : "Sapphire Ore",
+  "item.tutorialmod.raw_sapphire": "Raw Sapphire",
+  "block.tutorialmod.nether_sapphire_ore" : "Nether Sapphire Ore",
+  "block.tutorialmod.end_stone_sapphire_block": "End Stone Sapphire Ore",
+  "block.tutorialmod.deepslate_sapphire_ore" : "Deepslate Sapphire Ore",
+  "block.tutorialmod.raw_sapphire_block": "Block of Raw Sapphire"
 }
